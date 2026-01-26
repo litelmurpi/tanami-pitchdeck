@@ -575,11 +575,59 @@ body::before {
   opacity: 0.5;
 }
 
+/* Architecture Slide Layout */
+.architecture-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Compact Arch Flow */
+.arch-flow.compact {
+  gap: var(--space-xs);
+}
+
+.arch-flow.compact .arch-node {
+  padding: var(--space-sm) var(--space-md);
+  min-width: 120px;
+}
+
+.arch-flow.compact .arch-node .node-icon {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.arch-flow.compact .arch-node .node-title {
+  font-size: 0.7rem;
+}
+
+.arch-flow.compact .arch-node .node-items {
+  font-size: 0.6rem;
+}
+
+.arch-flow.compact .arch-connector {
+  font-size: 1rem;
+}
+
 /* Split View */
 .split-view {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
+}
+
+.split-view.compact {
+  gap: var(--space-sm);
+}
+
+.split-view.compact .panel-header {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.65rem;
+}
+
+.split-view.compact .panel-content {
+  padding: 0.5rem;
 }
 
 .split-panel {

@@ -255,6 +255,22 @@
               SYSTEM <span class="accent">ARCHITECTURE</span>
             </h2>
           </div>
+          <div
+            class="arch-diagram anim"
+            style="margin-top: 2rem; text-align: center"
+          >
+            <img
+              src="tanami_architecture_1769436255052.png"
+              alt="Sistem Tanami - 3 Domain"
+              style="
+                max-width: 65%;
+                margin-top: -2rem;
+                padding-bottom: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+              "
+            />
+          </div>
           <div class="arch-flow">
             <div class="arch-node accent anim">
               <div class="node-icon">📡</div>
@@ -380,50 +396,72 @@
       <!-- SLIDE 9: Automation Logic -->
       <section class="slide" data-slide="8">
         <div class="slide-content">
-          <div class="slide-header">
+          <div class="slide-header" style="margin-bottom: 1rem">
             <span class="pill-label anim">07 — Logika</span>
-            <h2 class="anim">AUTOMATION <span class="accent">LOGIC</span></h2>
+            <h2 class="anim" style="font-size: clamp(1.8rem, 4vw, 2.5rem)">
+              AUTOMATION <span class="accent">LOGIC</span>
+            </h2>
           </div>
-          <div class="split-view">
+          <div
+            class="automation-diagram anim"
+            style="text-align: center; margin-bottom: 1rem"
+          >
+            <img
+              src="automation_flow.png"
+              alt="Automation Flow Diagram"
+              style="
+                max-width: 75%;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+              "
+            />
+          </div>
+          <div class="split-view compact">
             <div class="split-panel anim">
               <div class="panel-header green">💧 Penyiraman</div>
-              <div class="panel-content">
-                <div class="code-display">
-                  <span class="code-keyword">IF</span> (Moisture <
-                  <span class="code-value">40%</span>)<br />
-                  &nbsp;&nbsp;Pump = <span class="code-on">ON</span><br />
-                  <span class="code-keyword">ELSE</span><br />
-                  &nbsp;&nbsp;Pump = <span class="code-off">OFF</span>
+              <div class="panel-content" style="padding: 0.75rem">
+                <div
+                  class="code-display"
+                  style="padding: 0.75rem; font-size: 0.7rem"
+                >
+                  <span class="code-keyword">IF</span> (Moisture &lt;
+                  <span class="code-value">40%</span>) → Pump =
+                  <span class="code-on">ON</span><br />
+                  <span class="code-keyword">ELSE</span> → Pump =
+                  <span class="code-off">OFF</span>
                 </div>
                 <p
                   style="
-                    margin-top: 1rem;
-                    font-size: 0.8rem;
+                    margin-top: 0.5rem;
+                    font-size: 0.65rem;
                     color: var(--text-secondary);
                   "
                 >
-                  ✅ Closed-loop: mati otomatis saat target tercapai
+                  ✅ Auto-stop saat target tercapai
                 </p>
               </div>
             </div>
             <div class="split-panel anim">
               <div class="panel-header default">🌱 Pemupukan (Future)</div>
-              <div class="panel-content">
-                <div class="code-display">
-                  <span class="code-keyword">IF</span> (TDS <
-                  <span class="code-value">500ppm</span>)<br />
-                  &nbsp;&nbsp;Nutrient = <span class="code-on">ON</span><br />
-                  <span class="code-keyword">ELSE</span><br />
-                  &nbsp;&nbsp;Nutrient = <span class="code-off">OFF</span>
+              <div class="panel-content" style="padding: 0.75rem">
+                <div
+                  class="code-display"
+                  style="padding: 0.75rem; font-size: 0.7rem"
+                >
+                  <span class="code-keyword">IF</span> (TDS &lt;
+                  <span class="code-value">500ppm</span>) → Nutrient =
+                  <span class="code-on">ON</span><br />
+                  <span class="code-keyword">ELSE</span> → Nutrient =
+                  <span class="code-off">OFF</span>
                 </div>
                 <p
                   style="
-                    margin-top: 1rem;
-                    font-size: 0.8rem;
+                    margin-top: 0.5rem;
+                    font-size: 0.65rem;
                     color: var(--text-muted);
                   "
                 >
-                  🔮 Ready-to-integrate dengan sensor NPK
+                  🔮 Ready untuk sensor NPK
                 </p>
               </div>
             </div>
