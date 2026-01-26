@@ -3,738 +3,183 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TANAMI - Smart Urban Farming IoT</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>TANAMI Pitch Deck - Pilih Versi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Plus Jakarta Sans",
+          -apple-system,
+          sans-serif;
+        background: #0f0f0f;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(74, 222, 128, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(168, 85, 247, 0.1) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        max-width: 800px;
+      }
+
+      .logo {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+        filter: drop-shadow(0 0 40px rgba(74, 222, 128, 0.3));
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+
+      .tagline {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 3rem;
+      }
+
+      .version-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .version-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 2rem;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+      }
+
+      .version-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: #4ade80;
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .version-number {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #4ade80;
+        margin-bottom: 0.5rem;
+      }
+
+      .version-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .version-desc {
+        font-size: 0.85rem;
+        color: #a0a0a0;
+        line-height: 1.6;
+      }
+
+      .version-card:nth-child(2) .version-number {
+        color: #a855f7;
+      }
+
+      .version-card:nth-child(2):hover {
+        border-color: #a855f7;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        background: rgba(74, 222, 128, 0.15);
+        color: #4ade80;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+      }
+
+      .version-card:nth-child(2) .badge {
+        background: rgba(168, 85, 247, 0.15);
+        color: #a855f7;
+      }
+
+      @media (max-width: 600px) {
+        .version-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Persistent Logo -->
-    <div class="header-logo">
-      <img src="logotext.png" alt="TANAMI Logo" class="persistent-logo" />
-    </div>
+    <div class="container">
+      <img src="1/logotext.png" alt="TANAMI" class="logo" />
+      <h1>Pitch Deck</h1>
+      <p class="tagline">
+        "Menanam tumbuhan, Menyiram harapan, Menumbuhkan masa depan"
+      </p>
 
-    <!-- Progress Bar -->
-    <div class="progress-container">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="nav-controls">
-      <button class="nav-btn" id="prevBtn" aria-label="Previous">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path d="M15 18l-6-6 6-6" />
-        </svg>
-      </button>
-      <span class="slide-counter"
-        ><span id="currentSlide">1</span> /
-        <span id="totalSlides">15</span></span
-      >
-      <button class="nav-btn" id="nextBtn" aria-label="Next">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path d="M9 18l6-6-6-6" />
-        </svg>
-      </button>
-    </nav>
-
-    <!-- Keyboard hints -->
-    <div class="keyboard-hints">
-      <span>← →</span>
-      <span>F Fullscreen</span>
-    </div>
-
-    <!-- Slides -->
-    <div class="slides-container" id="slidesContainer">
-      <!-- SLIDE 1: Cover -->
-      <section class="slide active" data-slide="1">
-        <div class="slide-content cover-slide">
-          <span class="pill-label anim">🌱 Smart Garden IoT System</span>
-          <div class="logo-wrapper anim">
-            <img src="logotext.png" alt="TANAMI" class="main-logo" />
-          </div>
-          <p class="subtitle anim">
-            Sistem monitoring dan otomasi smart garden berbasis IoT untuk urban
-            farming yang mudah dan efisien
+      <div class="version-grid">
+        <a href="1/index.html" class="version-card">
+          <span class="badge">Original</span>
+          <div class="version-number">V1</div>
+          <div class="version-title">Classic Pitch</div>
+          <p class="version-desc">
+            Versi original dengan struktur presentasi standar dan visual yang
+            clean.
           </p>
-          <p class="tagline anim">
-            "Menanam tumbuhan, Menyiram harapan, Menumbuhkan masa depan"
+        </a>
+
+        <a href="2/index.html" class="version-card">
+          <span class="badge">H.A.P.I Method</span>
+          <div class="version-number">V2</div>
+          <div class="version-title">Enhanced Pitch</div>
+          <p class="version-desc">
+            Versi enhanced dengan teknik H.A.P.I (Hook, Anda Siapa, Paparkan,
+            Impak) dan data statistik yang lebih kuat.
           </p>
-          <div class="scroll-hint anim">
-            <span>Tekan → untuk melanjutkan</span>
-            <div class="arrow"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 2: Problem -->
-      <section class="slide" data-slide="2">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">01 — Masalah</span>
-            <h2 class="anim">
-              TANTANGAN <span class="accent">URBAN FARMING</span>
-            </h2>
-          </div>
-          <div class="bento-grid cols-4">
-            <div class="card anim">
-              <span class="card-icon">⏰</span>
-              <h3 class="card-title">Waktu Terbatas</h3>
-              <p class="card-desc">
-                Tanaman sering layu karena lupa disiram di tengah kesibukan
-              </p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">📊</span>
-              <h3 class="card-title">Tanpa Data Kuantitatif</h3>
-              <p class="card-desc">
-                Keputusan perawatan berdasarkan "kira-kira", bukan fakta terukur
-              </p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">🔧</span>
-              <h3 class="card-title">Setup Rumit</h3>
-              <p class="card-desc">
-                Perangkat IoT membutuhkan konfigurasi IP manual
-              </p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">💰</span>
-              <h3 class="card-title">Mahal</h3>
-              <p class="card-desc">Solusi komersial Rp 500rb - Rp 2jt</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 3: Target Users -->
-      <!-- <section class="slide" data-slide="3">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">02 — Target</span>
-            <h2 class="anim">
-              SIAPA YANG <span class="accent">BUTUH INI?</span>
-            </h2>
-          </div>
-          <div class="bento-grid cols-4">
-            <div class="card accent-border anim">
-              <span class="card-icon">🏠</span>
-              <h3 class="card-title">Urban Farmers</h3>
-              <p class="card-desc">
-                Berkebun di rumah/apartemen dengan lahan terbatas
-              </p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">👨‍💻</span>
-              <h3 class="card-title">Pekerja Sibuk</h3>
-              <p class="card-desc">Hobi berkebun tapi minim waktu monitoring</p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">🌿</span>
-              <h3 class="card-title">Pemula Berkebun</h3>
-              <p class="card-desc">Ingin berkebun tanpa takut tanaman mati</p>
-            </div>
-            <div class="card accent-border anim">
-              <span class="card-icon">🏢</span>
-              <h3 class="card-title">IoT Enthusiast</h3>
-              <p class="card-desc">Integrasi dengan ekosistem smart home</p>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- SLIDE 4: Solution -->
-      <section class="slide" data-slide="3">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">02 — Solusi</span>
-            <h2 class="anim">TANAMI <span class="accent">SYSTEM</span></h2>
-          </div>
-          <div class="feature-section">
-            <div class="feature-visual anim">
-              <div class="feature-circle">
-                <img
-                  src="Tanami_icon.png"
-                  alt="Tanami Icon"
-                  class="feature-icon"
-                />
-              </div>
-            </div>
-            <div class="feature-list">
-              <div class="feature-item anim">
-                <span class="feature-num">01</span>
-                <div class="feature-text">
-                  <h3>Real-Time Monitoring</h3>
-                  <p>
-                    Pantau kelembaban, suhu, dan kondisi tanaman dari smartphone
-                  </p>
-                </div>
-              </div>
-              <div class="feature-item anim">
-                <span class="feature-num">02</span>
-                <div class="feature-text">
-                  <h3>Auto-Watering</h3>
-                  <p>
-                    Penyiraman otomatis berdasarkan threshold yang dikustomisasi
-                  </p>
-                </div>
-              </div>
-              <div class="feature-item anim">
-                <span class="feature-num">03</span>
-                <div class="feature-text">
-                  <h3>Plug & Play</h3>
-                  <p>
-                    Zero-configuration dengan protokol NSD, koneksi < 2 detik
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 5: Advanced Features -->
-      <section class="slide" data-slide="4">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">03 — Fitur</span>
-            <h2 class="anim">FITUR <span class="accent">UNGGULAN</span></h2>
-          </div>
-          <div class="bento-grid cols-3">
-            <div class="card accent-border span-2 anim">
-              <span class="card-icon">🤖</span>
-              <h3 class="card-title">TanamCare AI</h3>
-              <p class="card-desc">
-                Deteksi penyakit tanaman melalui foto menggunakan teknologi
-                image processing berbasis AI
-              </p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">📈</span>
-              <h3 class="card-title">Data-Driven</h3>
-              <p class="card-desc">
-                Keputusan berdasarkan data sensor real-time
-              </p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">🔋</span>
-              <h3 class="card-title">Ready-for-Expansion</h3>
-              <p class="card-desc">
-                Arsitektur modular, jalur siap untuk upgrade sensor NPK
-              </p>
-            </div>
-            <div class="card accent-border span-2 anim">
-              <span class="card-icon">⚡</span>
-              <h3 class="card-title">Edge Computing</h3>
-              <p class="card-desc">
-                Logika otomasi berjalan di perangkat — tetap bekerja meski tanpa
-                koneksi aplikasi
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 6: Architecture -->
-      <section class="slide" data-slide="5">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">04 — Arsitektur</span>
-            <h2 class="anim">
-              SYSTEM <span class="accent">ARCHITECTURE</span>
-            </h2>
-          </div>
-          <div
-            class="arch-diagram anim"
-            style="margin-top: 2rem; text-align: center"
-          >
-            <img
-              src="tanami_architecture_1769436255052.png"
-              alt="Sistem Tanami - 3 Domain"
-              style="
-                max-width: 65%;
-                margin-top: -2rem;
-                padding-bottom: 2rem;
-                border-radius: 12px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-              "
-            />
-          </div>
-          <div class="arch-flow">
-            <div class="arch-node accent anim">
-              <div class="node-icon">📡</div>
-              <div class="node-title">Sensing</div>
-              <div class="node-items">Soil Moisture<br />DHT11</div>
-            </div>
-            <div class="arch-connector anim">→</div>
-            <div class="arch-node accent anim">
-              <div class="node-icon">🧠</div>
-              <div class="node-title">Processing</div>
-              <div class="node-items">ESP32<br />Threshold Logic</div>
-            </div>
-            <div class="arch-connector anim">→</div>
-            <div class="arch-node anim">
-              <div class="node-icon">💧</div>
-              <div class="node-title">Actuating</div>
-              <div class="node-items">Relay<br />Water Pump</div>
-            </div>
-            <div class="arch-connector anim">→</div>
-            <div class="arch-node accent anim">
-              <div class="node-icon">📱</div>
-              <div class="node-title">Monitoring</div>
-              <div class="node-items">Android App<br />TanamCare AI</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 7: Hardware -->
-      <section class="slide" data-slide="6">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">05 — Hardware</span>
-            <h2 class="anim">
-              HARDWARE <span class="accent">COMPONENTS</span>
-            </h2>
-          </div>
-          <div class="bento-grid cols-3">
-            <div class="card accent-border anim">
-              <span class="card-icon">🔌</span>
-              <h3 class="card-title">ESP32</h3>
-              <p class="card-desc">
-                WiFi + Bluetooth built-in, Web Server & NSD support
-              </p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">💧</span>
-              <h3 class="card-title">Soil Moisture</h3>
-              <p class="card-desc">Capacitive sensor, Analog 600-2900</p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">🌡️</span>
-              <h3 class="card-title">DHT11</h3>
-              <p class="card-desc">Suhu & Kelembaban udara</p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">⚡</span>
-              <h3 class="card-title">Relay 2CH</h3>
-              <p class="card-desc">Switch controller, 5V DC</p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">🚿</span>
-              <h3 class="card-title">Water Pump</h3>
-              <p class="card-desc">Mini pump, 3V DC</p>
-            </div>
-            <div class="card accent-border anim">
-              <span class="card-icon">🔋</span>
-              <h3 class="card-title">Power</h3>
-              <p class="card-desc">Battery 9V atau USB 5V</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 8: Software -->
-      <section class="slide" data-slide="7">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">06 — Software</span>
-            <h2 class="anim">SOFTWARE <span class="accent">STACK</span></h2>
-          </div>
-          <div class="split-view">
-            <div class="split-panel anim">
-              <div class="panel-header green">📱 Android App</div>
-              <div class="panel-content">
-                <div class="component-list">
-                  <div class="component-row">
-                    <span>NsdManager</span>
-                    <span>Auto-discovery</span>
-                  </div>
-                  <div class="component-row">
-                    <span>Retrofit</span>
-                    <span>HTTP client</span>
-                  </div>
-                  <div class="component-row">
-                    <span>MySQL</span>
-                    <span>Local cache</span>
-                  </div>
-                  <div class="component-row">
-                    <span>TanamCare</span>
-                    <span>AI diagnosis</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="split-panel anim">
-              <div class="panel-header default">⚡ ESP32 Firmware</div>
-              <div class="panel-content">
-                <div class="code-display">
-                  {<br />
-                  &nbsp;&nbsp;"moisture": 45,<br />
-                  &nbsp;&nbsp;"temp": 28,<br />
-                  &nbsp;&nbsp;"humidity": 65,<br />
-                  &nbsp;&nbsp;"pump": "OFF"<br />
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 9: Automation Logic -->
-      <section class="slide" data-slide="8">
-        <div class="slide-content">
-          <div class="slide-header" style="margin-bottom: 1rem">
-            <span class="pill-label anim">07 — Logika</span>
-            <h2 class="anim" style="font-size: clamp(1.8rem, 4vw, 2.5rem)">
-              AUTOMATION <span class="accent">LOGIC</span>
-            </h2>
-          </div>
-          <div
-            class="automation-diagram anim"
-            style="text-align: center; margin-bottom: 1rem"
-          >
-            <img
-              src="automation_flow.png"
-              alt="Automation Flow Diagram"
-              style="
-                max-width: 75%;
-                border-radius: 12px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-              "
-            />
-          </div>
-          <div class="split-view compact">
-            <div class="split-panel anim">
-              <div class="panel-header green">💧 Penyiraman</div>
-              <div class="panel-content" style="padding: 0.75rem">
-                <div
-                  class="code-display"
-                  style="padding: 0.75rem; font-size: 0.7rem"
-                >
-                  <span class="code-keyword">IF</span> (Moisture &lt;
-                  <span class="code-value">40%</span>) → Pump =
-                  <span class="code-on">ON</span><br />
-                  <span class="code-keyword">ELSE</span> → Pump =
-                  <span class="code-off">OFF</span>
-                </div>
-                <p
-                  style="
-                    margin-top: 0.5rem;
-                    font-size: 0.65rem;
-                    color: var(--text-secondary);
-                  "
-                >
-                  ✅ Auto-stop saat target tercapai
-                </p>
-              </div>
-            </div>
-            <div class="split-panel anim">
-              <div class="panel-header default">🌱 Pemupukan (Future)</div>
-              <div class="panel-content" style="padding: 0.75rem">
-                <div
-                  class="code-display"
-                  style="padding: 0.75rem; font-size: 0.7rem"
-                >
-                  <span class="code-keyword">IF</span> (TDS &lt;
-                  <span class="code-value">500ppm</span>) → Nutrient =
-                  <span class="code-on">ON</span><br />
-                  <span class="code-keyword">ELSE</span> → Nutrient =
-                  <span class="code-off">OFF</span>
-                </div>
-                <p
-                  style="
-                    margin-top: 0.5rem;
-                    font-size: 0.65rem;
-                    color: var(--text-muted);
-                  "
-                >
-                  🔮 Ready untuk sensor NPK
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 10: Zero-Config -->
-      <section class="slide" data-slide="9">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">08 — Koneksi</span>
-            <h2 class="anim">ZERO <span class="accent">CONFIGURATION</span></h2>
-          </div>
-          <div class="bento-grid cols-4">
-            <div class="card accent-border anim">
-              <span class="card-icon">📡</span>
-              <h3 class="card-title">Broadcast</h3>
-              <p class="card-desc">ESP32 menyiarkan NSD service</p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">📶</span>
-              <h3 class="card-title">Discover</h3>
-              <p class="card-desc">App dengan NsdManager mendengarkan sinyal</p>
-            </div>
-            <div class="card anim">
-              <span class="card-icon">🔗</span>
-              <h3 class="card-title">Resolve</h3>
-              <p class="card-desc">IP & Port otomatis</p>
-            </div>
-            <div class="card accent-border anim">
-              <span class="card-icon">✅</span>
-              <h3 class="card-title">Connect!</h3>
-              <p class="card-desc">Dashboard siap digunakan</p>
-            </div>
-          </div>
-          <div class="stats-row">
-            <div class="stat-box anim">
-              <div class="stat-number">&lt;2s</div>
-              <div class="stat-label">Discovery Time</div>
-            </div>
-            <div class="stat-box anim">
-              <div class="stat-number">0</div>
-              <div class="stat-label">Manual Config</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 11: Testing -->
-      <section class="slide" data-slide="10">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">9 — Testing</span>
-            <h2 class="anim">HASIL <span class="accent">PENGUJIAN</span></h2>
-          </div>
-          <div class="test-list">
-            <div class="test-row anim">
-              <span class="test-status">✅</span>
-              <div class="test-info">
-                <h4>Auto-Discovery</h4>
-                <p>IP resolved dalam waktu kurang dari 2 detik</p>
-              </div>
-              <span class="test-badge">Pass</span>
-            </div>
-            <div class="test-row anim">
-              <span class="test-status">✅</span>
-              <div class="test-info">
-                <h4>Sensor Accuracy</h4>
-                <p>Data sesuai dengan kondisi fisik di lapangan</p>
-              </div>
-              <span class="test-badge">Pass</span>
-            </div>
-            <div class="test-row anim">
-              <span class="test-status">✅</span>
-              <div class="test-info">
-                <h4>Auto-Watering</h4>
-                <p>Pompa aktif konsisten saat kelembaban < threshold 40%</p>
-              </div>
-              <span class="test-badge">Pass</span>
-            </div>
-            <div class="test-row anim">
-              <span class="test-status">✅</span>
-              <div class="test-info">
-                <h4>Closed-Loop System</h4>
-                <p>Pompa mati otomatis saat kondisi ideal tercapai</p>
-              </div>
-              <span class="test-badge">Pass</span>
-            </div>
-            <div class="test-row anim">
-              <span class="test-status">✅</span>
-              <div class="test-info">
-                <h4>Edge Computing</h4>
-                <p>Sistem tetap berjalan saat koneksi app terputus</p>
-              </div>
-              <span class="test-badge">Pass</span>
-            </div>
-            <div class="test-row anim">
-              <span class="test-status">✅</span>
-              <div class="test-info">
-                <h4>TanamCare AI</h4>
-                <p>Diagnosis penyakit tanaman dari foto berhasil</p>
-              </div>
-              <span class="test-badge">Pass</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 12: Comparison -->
-      <section class="slide" data-slide="11">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">10 — Keunggulan</span>
-            <h2 class="anim">
-              COMPETITIVE <span class="accent">ADVANTAGE</span>
-            </h2>
-          </div>
-          <div class="comparison-table anim">
-            <div class="comp-header">
-              <div class="comp-cell header">Aspek</div>
-              <div class="comp-cell header">🌱 Tanami</div>
-              <div class="comp-cell header">❌ Kompetitor</div>
-            </div>
-            <div class="comp-row">
-              <div class="comp-cell">💰 Harga</div>
-              <div class="comp-cell win">< Rp 200.000</div>
-              <div class="comp-cell lose">Rp 500rb - 2jt</div>
-            </div>
-            <div class="comp-row">
-              <div class="comp-cell">🔧 Setup</div>
-              <div class="comp-cell win">NSD < 2 detik</div>
-              <div class="comp-cell lose">IP manual</div>
-            </div>
-            <!-- <div class="comp-row">
-              <div class="comp-cell">🎯 Target</div>
-              <div class="comp-cell win">Indonesia</div>
-              <div class="comp-cell lose">Generic</div>
-            </div> -->
-            <div class="comp-row">
-              <div class="comp-cell">🔌 Arsitektur</div>
-              <div class="comp-cell win">Modular</div>
-              <div class="comp-cell lose">Fixed</div>
-            </div>
-            <div class="comp-row">
-              <div class="comp-cell">📡 Koneksi</div>
-              <div class="comp-cell win">Edge Computing</div>
-              <div class="comp-cell lose">Cloud-dependent</div>
-            </div>
-            <div class="comp-row">
-              <div class="comp-cell">🤖 AI</div>
-              <div class="comp-cell win">TanamCare</div>
-              <div class="comp-cell lose">—</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 13: USP -->
-      <section class="slide" data-slide="12">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">11 — USP</span>
-            <h2 class="anim">
-              UNIQUE SELLING <span class="accent">POINTS</span>
-            </h2>
-          </div>
-          <div class="usp-list">
-            <div class="usp-item anim">
-              <span class="usp-num">01</span>
-              <div class="usp-content">
-                <h3>Dirancang khusus untuk Urban Farmers</h3>
-              </div>
-            </div>
-            <div class="usp-item anim">
-              <span class="usp-num">02</span>
-              <div class="usp-content">
-                <h3>🔌 Zero-Configuration dengan protokol NSD</h3>
-              </div>
-            </div>
-            <div class="usp-item anim">
-              <span class="usp-num">03</span>
-              <div class="usp-content">
-                <h3>🤖 AI-Powered Plant Diagnosis dengan TanamCare</h3>
-              </div>
-            </div>
-            <div class="usp-item anim">
-              <span class="usp-num">04</span>
-              <div class="usp-content">
-                <h3>💰 Affordable untuk semua kalangan</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 14: Roadmap -->
-      <section class="slide" data-slide="13">
-        <div class="slide-content">
-          <div class="slide-header">
-            <span class="pill-label anim">12 — Roadmap</span>
-            <h2 class="anim">FUTURE <span class="accent">DEVELOPMENT</span></h2>
-          </div>
-          <div class="roadmap-timeline">
-            <div class="timeline-phase anim">
-              <div class="phase-tag green">Phase 2</div>
-              <div class="phase-content">
-                <h3>Cloud</h3>
-                <ul>
-                  <li>☁️ Cloud Database</li>
-                  <li>📊 Analytics & Trends</li>
-                  <li>🔔 Push Notifications</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-phase anim">
-              <div class="phase-tag default">Phase 3</div>
-              <div class="phase-content">
-                <h3>Scale</h3>
-                <ul>
-                  <li>📡 MQTT Protocol</li>
-                  <li>🌱 Sensor NPK</li>
-                  <li>🏭 Multi-node</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-phase anim">
-              <div class="phase-tag default">Business</div>
-              <div class="phase-content">
-                <h3>Expand</h3>
-                <ul>
-                  <li>🛒 DIY Kit</li>
-                  <li>🏢 Enterprise</li>
-                  <li>📚 Edu Platform</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 15: Thank You -->
-      <section class="slide" data-slide="14">
-        <div class="slide-content thank-you-content">
-          <span class="pill-label anim">🌱 Tanami</span>
-          <div class="big-thanks anim">
-            <span class="line1">Terima</span>
-            <span class="line2">Kasih!</span>
-          </div>
-          <p class="tagline anim">
-            "Menanam tumbuhan, Menyiram harapan, Menumbuhkan masa depan"
-          </p>
-          <div class="contact-row anim">
-            <div class="contact-item">
-              <span>📧</span>
-              <span>tanamiuniverse10@gmail.com</span>
-            </div>
-            <div class="contact-item">
-              <span>📷</span>
-              <span>@tanami_tech</span>
-            </div>
-            <div class="contact-item">
-              <span>🎥</span>
-              <span>@Tanami_Universe10</span>
-            </div>
-          </div>
-          <div class="questions-box anim">
-            <h2>Ada Pertanyaan?</h2>
-          </div>
-        </div>
-      </section>
+        </a>
+      </div>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>

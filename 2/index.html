@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TANAMI - Smart Urban Farming IoT | H.A.P.I Pitch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Progress Indicator -->
+    <div class="progress-ring">
+      <svg viewBox="0 0 100 100">
+        <circle class="bg" cx="50" cy="50" r="45" />
+        <circle class="progress" cx="50" cy="50" r="45" id="progressCircle" />
+      </svg>
+      <span class="progress-text" id="progressText">1/15</span>
+    </div>
+
+    <!-- Phase Indicator -->
+    <div class="phase-indicator" id="phaseIndicator">
+      <span class="phase-letter">H</span>
+      <span class="phase-name">HOOK</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-controls">
+      <button class="nav-btn" id="prevBtn">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <button class="nav-btn" id="nextBtn">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Slides Container -->
+    <div class="slides-container" id="slides">
+      <!-- ========== H - HOOK (Slide 1-2) ========== -->
+
+      <!-- Slide 1: Hook Opening -->
+      <section class="slide active" data-phase="H" data-phase-name="HOOK">
+        <div class="slide-content center-content">
+          <div class="hook-question anim">
+            <p class="question-text">
+              <span class="stat-number">85%</span> Masyarakat Kota
+            </p>
+            <span class="question-highlight"
+              >Belum Mampu Memproduksi Makanannya Sendiri</span
+            >
+          </div>
+          <div class="hook-data anim">
+            <div class="data-point">
+              <span class="data-icon">📊</span>
+              <span class="data-text"
+                >Hanya 15% rumah tangga kota yang aktif berkebun</span
+              >
+            </div>
+            <div class="data-point">
+              <span class="data-icon">⏰</span>
+              <span class="data-text"
+                >Alasan utama: <strong>"tidak praktis"</strong> dan
+                <strong>"ribet"</strong></span
+              >
+            </div>
+          </div>
+          <div class="hook-source anim">
+            <span>Sumber: Data Kementerian Pertanian, 2023</span>
+          </div>
+          <div class="scroll-hint anim">
+            <span>→ Lanjut</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 2: Problem -->
+      <section class="slide" data-phase="H" data-phase-name="HOOK">
+        <div class="slide-content">
+          <span class="section-tag anim">TANTANGAN</span>
+          <h2 class="slide-title anim">
+            4 Masalah <span class="accent">Urban Farmers</span>
+          </h2>
+          <div class="problem-grid anim">
+            <div class="problem-card">
+              <div class="problem-icon">⏰</div>
+              <h3>Waktu Terbatas</h3>
+              <p>Tanaman layu karena lupa disiram</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon">📊</div>
+              <h3>Tanpa Data</h3>
+              <p>Perawatan berdasarkan "kira-kira"</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon">🔧</div>
+              <h3>Setup Rumit</h3>
+              <p>Harus input IP manual, error-prone</p>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon">💰</div>
+              <h3>Mahal</h3>
+              <p>Solusi komersial Rp 500rb - 2jt</p>
+            </div>
+          </div>
+          <p class="problem-cta anim">
+            Ini bukan masalah Anda saja — ini masalah
+            <strong>JUTAAN</strong> urban farmers Indonesia.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== A - ANDA SIAPA (Slide 3) ========== -->
+
+      <!-- Slide 3: About Us -->
+      <section class="slide" data-phase="A" data-phase-name="ANDA SIAPA">
+        <div class="slide-content center-content">
+          <span class="section-tag anim">PERKENALAN</span>
+          <div class="logo-container anim">
+            <img src="../1/logotext.png" alt="TANAMI" class="main-logo" />
+          </div>
+          <p class="tagline anim">
+            "Menanam tumbuhan, Menyiram harapan, Menumbuhkan masa depan"
+          </p>
+          <div class="team-intro anim">
+            <p class="team-text">
+              Kami <strong>mahasiswa informatika</strong> yang juga
+              <strong>urban farmers</strong>.
+            </p>
+            <p class="team-subtext">
+              Kami PERNAH di posisi Anda — dari frustrasi itu, kami BERTINDAK.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== P - PAPARKAN (Slide 4-9) ========== -->
+
+      <!-- Slide 4: Solution Overview -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content">
+          <span class="section-tag anim">SOLUSI</span>
+          <h2 class="slide-title anim">
+            3 Fitur <span class="accent">Utama</span>
+          </h2>
+          <div class="feature-cards anim">
+            <div class="feature-card glass">
+              <div class="feature-num">01</div>
+              <h3>Real-Time Monitoring</h3>
+              <p>Pantau kelembaban & suhu dari HP</p>
+              <span class="feature-benefit">→ Tidak perlu nebak-nebak</span>
+            </div>
+            <div class="feature-card glass accent-card">
+              <div class="feature-num">02</div>
+              <h3>Auto-Watering</h3>
+              <p>Siram otomatis saat tanah kering</p>
+              <span class="feature-benefit">→ Tidak perlu takut lupa</span>
+            </div>
+            <div class="feature-card glass">
+              <div class="feature-num">03</div>
+              <h3>Plug & Play</h3>
+              <p>Nyalakan → Terhubung 2 detik</p>
+              <span class="feature-benefit">→ Zero configuration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5: Innovation -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content">
+          <span class="section-tag anim">INOVASI</span>
+          <h2 class="slide-title anim">
+            Yang Membuat <span class="accent">Berbeda</span>
+          </h2>
+          <div class="innovation-grid anim">
+            <div class="innovation-item">
+              <span class="inno-icon">🤖</span>
+              <div class="inno-content">
+                <h3>TanamCare AI</h3>
+                <p>Foto daun → Diagnosis penyakit + rekomendasi</p>
+              </div>
+            </div>
+            <div class="innovation-item">
+              <span class="inno-icon">⚡</span>
+              <div class="inno-content">
+                <h3>Edge Computing</h3>
+                <p>Berjalan otonom meski HP mati / WiFi putus</p>
+              </div>
+            </div>
+            <div class="innovation-item">
+              <span class="inno-icon">📈</span>
+              <div class="inno-content">
+                <h3>Data-Driven</h3>
+                <p>Keputusan berdasarkan %, °C — bukan feeling</p>
+              </div>
+            </div>
+            <div class="innovation-item">
+              <span class="inno-icon">🔋</span>
+              <div class="inno-content">
+                <h3>Modular</h3>
+                <p>Jalur siap untuk upgrade sensor NPK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 6: Architecture -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content">
+          <span class="section-tag anim">ARSITEKTUR</span>
+          <h2 class="slide-title anim">
+            3 Domain <span class="accent">Terintegrasi</span>
+          </h2>
+          <div class="arch-visual anim">
+            <img
+              src="../1/tanami_architecture_1769436255052.png"
+              alt="System Architecture"
+              class="arch-image"
+            />
+          </div>
+          <div class="arch-flow-simple anim">
+            <div class="flow-node">📡 Node IoT</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node accent">📱 Android App</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">☁️ AI Cloud</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Hardware & Cost -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content center-content">
+          <span class="section-tag anim">HARDWARE</span>
+          <h2 class="slide-title anim">Total Biaya Komponen</h2>
+          <div class="price-highlight anim">
+            <span class="price-label">Hanya</span>
+            <span class="price-value">< Rp 200.000</span>
+            <span class="price-compare">10x lebih murah dari kompetitor!</span>
+          </div>
+          <div class="component-list anim">
+            <span class="comp-item">ESP32</span>
+            <span class="comp-item">Soil Sensor</span>
+            <span class="comp-item">DHT11</span>
+            <span class="comp-item">Relay</span>
+            <span class="comp-item">Pump</span>
+            <span class="comp-item">Power</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Software Stack -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content">
+          <span class="section-tag anim">SOFTWARE</span>
+          <h2 class="slide-title anim">
+            Tech <span class="accent">Stack</span>
+          </h2>
+          <div class="software-grid anim">
+            <div class="software-card">
+              <div class="software-icon">📱</div>
+              <h3>Android App</h3>
+              <p>Kotlin Native + NsdManager</p>
+              <span class="software-detail">Auto-discovery protocol</span>
+            </div>
+            <div class="software-card accent-card">
+              <div class="software-icon">🔌</div>
+              <h3>ESP32</h3>
+              <p>Web Server + REST API</p>
+              <span class="software-detail">Lightweight & efficient</span>
+            </div>
+            <div class="software-card">
+              <div class="software-icon">📦</div>
+              <h3>Data Format</h3>
+              <p>JSON</p>
+              <span class="software-detail">Simpel & universal</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Automation Logic -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content">
+          <span class="section-tag anim">LOGIKA</span>
+          <h2 class="slide-title anim">
+            Closed-Loop <span class="accent">System</span>
+          </h2>
+          <div class="logic-visual anim">
+            <img
+              src="../1/automation_flow.png"
+              alt="Automation Flow"
+              class="logic-image"
+            />
+          </div>
+          <div class="logic-benefits anim">
+            <div class="benefit-item">✅ Hemat air — mati otomatis</div>
+            <div class="benefit-item">✅ Otonom — tanpa bergantung app</div>
+            <div class="benefit-item">
+              ✅ Efisien — kurangi kerja manual 90%
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 10: Zero-Configuration (NSD) -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content center-content">
+          <span class="section-tag anim">INOVASI</span>
+          <h2 class="slide-title anim">
+            Zero-Configuration <span class="accent">NSD</span>
+          </h2>
+          <div class="nsd-flow anim">
+            <div class="nsd-step">
+              <span class="nsd-num">1</span>
+              <span class="nsd-text">ESP32 broadcast identitas di WiFi</span>
+            </div>
+            <div class="nsd-arrow">→</div>
+            <div class="nsd-step">
+              <span class="nsd-num">2</span>
+              <span class="nsd-text">App mendengarkan dengan NsdManager</span>
+            </div>
+            <div class="nsd-arrow">→</div>
+            <div class="nsd-step">
+              <span class="nsd-num">3</span>
+              <span class="nsd-text">IP & Port resolve otomatis</span>
+            </div>
+            <div class="nsd-arrow">→</div>
+            <div class="nsd-step highlight">
+              <span class="nsd-num">✓</span>
+              <span class="nsd-text">Terhubung < 2 DETIK</span>
+            </div>
+          </div>
+          <p class="nsd-benefit anim">
+            🚫 Tidak perlu input IP manual → <strong>Zero human error</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 11: Testing Results -->
+      <section class="slide" data-phase="P" data-phase-name="PAPARKAN">
+        <div class="slide-content">
+          <span class="section-tag anim">TESTING</span>
+          <h2 class="slide-title anim">
+            Semua Test <span class="accent">LULUS ✓</span>
+          </h2>
+          <div class="test-grid anim">
+            <div class="test-item pass">
+              <span class="test-icon">✅</span>
+              <span class="test-name">Auto-Discovery</span>
+              <span class="test-result">< 2 detik</span>
+            </div>
+            <div class="test-item pass">
+              <span class="test-icon">✅</span>
+              <span class="test-name">Sensor Accuracy</span>
+              <span class="test-result">Valid</span>
+            </div>
+            <div class="test-item pass">
+              <span class="test-icon">✅</span>
+              <span class="test-name">Auto-Watering</span>
+              <span class="test-result">Konsisten</span>
+            </div>
+            <div class="test-item pass">
+              <span class="test-icon">✅</span>
+              <span class="test-name">Closed-Loop</span>
+              <span class="test-result">Pass</span>
+            </div>
+            <div class="test-item pass">
+              <span class="test-icon">✅</span>
+              <span class="test-name">Edge Computing</span>
+              <span class="test-result">Otonom</span>
+            </div>
+            <div class="test-item pass">
+              <span class="test-icon">✅</span>
+              <span class="test-name">TanamCare AI</span>
+              <span class="test-result">Berhasil</span>
+            </div>
+          </div>
+          <p class="test-conclusion anim">
+            Sistem <strong>SIAP PAKAI</strong> ✓
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== I - IMPAK (Slide 10-12) ========== -->
+
+      <!-- Slide 10: Competitive Advantage -->
+      <section class="slide" data-phase="I" data-phase-name="IMPAK">
+        <div class="slide-content">
+          <span class="section-tag anim">KEUNGGULAN</span>
+          <h2 class="slide-title anim">
+            TANAMI vs <span class="accent">Kompetitor</span>
+          </h2>
+          <div class="comparison-table anim">
+            <div class="compare-row header">
+              <span>Aspek</span>
+              <span class="tanami">🌱 TANAMI</span>
+              <span class="competitor">❌ Kompetitor</span>
+            </div>
+            <div class="compare-row">
+              <span>💰 Harga</span>
+              <span class="tanami win">< Rp 200rb</span>
+              <span class="competitor">Rp 500rb - 2jt</span>
+            </div>
+            <div class="compare-row">
+              <span>🔧 Setup</span>
+              <span class="tanami win">2 detik (NSD)</span>
+              <span class="competitor">Manual IP</span>
+            </div>
+            <div class="compare-row">
+              <span>🤖 AI</span>
+              <span class="tanami win">TanamCare ✓</span>
+              <span class="competitor">Tidak ada</span>
+            </div>
+            <div class="compare-row">
+              <span>⚡ Otonom</span>
+              <span class="tanami win">Edge Computing</span>
+              <span class="competitor">Cloud-dependent</span>
+            </div>
+          </div>
+          <p class="compare-summary anim">
+            Harga <strong>1/10</strong>, fitur <strong>LEBIH LENGKAP</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 13: USP (Unique Selling Points) -->
+      <section class="slide" data-phase="I" data-phase-name="IMPAK">
+        <div class="slide-content">
+          <span class="section-tag anim">MENGAPA TANAMI</span>
+          <h2 class="slide-title anim">
+            4 Alasan <span class="accent">Memilih TANAMI</span>
+          </h2>
+          <div class="usp-grid anim">
+            <div class="usp-card">
+              <div class="usp-icon">🌱</div>
+              <h3>Untuk Pemula</h3>
+              <p>Dirancang untuk yang baru memulai urban farming</p>
+            </div>
+            <div class="usp-card">
+              <div class="usp-icon">🔌</div>
+              <h3>Zero-Config</h3>
+              <p>Plug & Play dalam 2 detik</p>
+            </div>
+            <div class="usp-card">
+              <div class="usp-icon">🤖</div>
+              <h3>AI-Powered</h3>
+              <p>TanamCare untuk diagnosis penyakit</p>
+            </div>
+            <div class="usp-card">
+              <div class="usp-icon">💰</div>
+              <h3>Affordable</h3>
+              <p>< Rp 200rb, terjangkau semua kalangan</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 14: Roadmap -->
+      <section class="slide" data-phase="I" data-phase-name="IMPAK">
+        <div class="slide-content">
+          <span class="section-tag anim">ROADMAP</span>
+          <h2 class="slide-title anim">
+            Pengembangan <span class="accent">Selanjutnya</span>
+          </h2>
+          <div class="roadmap-visual anim">
+            <div class="roadmap-phase">
+              <div class="phase-badge">Phase 2</div>
+              <h3>Cloud</h3>
+              <ul>
+                <li>☁️ Cloud Database</li>
+                <li>📊 Analytics</li>
+                <li>🔔 Push Notifications</li>
+              </ul>
+            </div>
+            <div class="roadmap-phase accent-phase">
+              <div class="phase-badge">Phase 3</div>
+              <h3>Scale</h3>
+              <ul>
+                <li>📡 MQTT Protocol</li>
+                <li>🌱 Sensor NPK</li>
+                <li>🏭 Multi-node</li>
+              </ul>
+            </div>
+            <div class="roadmap-phase">
+              <div class="phase-badge">Business</div>
+              <h3>Expand</h3>
+              <ul>
+                <li>🛒 DIY Kit</li>
+                <li>🏢 Enterprise</li>
+                <li>📚 Edu Platform</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 12: Thank You & CTA -->
+      <section class="slide" data-phase="I" data-phase-name="IMPAK">
+        <div class="slide-content center-content">
+          <div class="closing-logo anim">
+            <img src="../1/logotext.png" alt="TANAMI" />
+          </div>
+          <div class="closing-tagline anim">
+            <p>"Menanam tumbuhan, Menyiram harapan, Menumbuhkan masa depan"</p>
+          </div>
+          <div class="closing-summary anim">
+            <div class="summary-item">💰 < Rp 200rb</div>
+            <div class="summary-item">⚡ Setup 2 detik</div>
+            <div class="summary-item">🤖 AI Diagnosis</div>
+          </div>
+          <div class="cta-box anim">
+            <h2>Mari wujudkan urban farming yang accessible untuk semua!</h2>
+          </div>
+          <div class="contact-info anim">
+            <span>📧 tanamiuniverse10@gmail.com</span>
+            <span>📷 @tanami_tech</span>
+          </div>
+          <div class="questions anim">
+            <h3>Ada Pertanyaan?</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
