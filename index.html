@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Persistent Logo -->
+    <div class="header-logo">
+      <img src="logotext.png" alt="TANAMI Logo" class="persistent-logo" />
+    </div>
+
     <!-- Progress Bar -->
     <div class="progress-container">
       <div class="progress-bar" id="progressBar"></div>
@@ -56,7 +61,9 @@
       <section class="slide active" data-slide="1">
         <div class="slide-content cover-slide">
           <span class="pill-label anim">🌱 Smart Garden IoT System</span>
-          <h1 class="main-title anim">TANA<span class="highlight">MI</span></h1>
+          <div class="logo-wrapper anim">
+            <img src="logotext.png" alt="TANAMI" class="main-logo" />
+          </div>
           <p class="subtitle anim">
             Sistem monitoring dan otomasi smart garden berbasis IoT untuk urban
             farming yang mudah dan efisien
@@ -90,25 +97,29 @@
             </div>
             <div class="card anim">
               <span class="card-icon">📊</span>
-              <h3 class="card-title">Tanpa Data</h3>
-              <p class="card-desc">Keputusan perawatan berdasarkan perkiraan</p>
+              <h3 class="card-title">Tanpa Data Kuantitatif</h3>
+              <p class="card-desc">
+                Keputusan perawatan berdasarkan "kira-kira", bukan fakta terukur
+              </p>
             </div>
             <div class="card anim">
               <span class="card-icon">🔧</span>
               <h3 class="card-title">Setup Rumit</h3>
-              <p class="card-desc">Perangkat IoT membutuhkan keahlian teknis</p>
+              <p class="card-desc">
+                Perangkat IoT membutuhkan konfigurasi IP manual
+              </p>
             </div>
             <div class="card anim">
               <span class="card-icon">💰</span>
               <h3 class="card-title">Mahal</h3>
-              <p class="card-desc">Solusi komersial tidak terjangkau</p>
+              <p class="card-desc">Solusi komersial Rp 500rb - Rp 2jt</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- SLIDE 3: Target Users -->
-      <section class="slide" data-slide="3">
+      <!-- <section class="slide" data-slide="3">
         <div class="slide-content">
           <div class="slide-header">
             <span class="pill-label anim">02 — Target</span>
@@ -120,26 +131,28 @@
             <div class="card accent-border anim">
               <span class="card-icon">🏠</span>
               <h3 class="card-title">Urban Farmers</h3>
-              <p class="card-desc">Berkebun di rumah dengan lahan terbatas</p>
+              <p class="card-desc">
+                Berkebun di rumah/apartemen dengan lahan terbatas
+              </p>
             </div>
             <div class="card anim">
               <span class="card-icon">👨‍💻</span>
               <h3 class="card-title">Pekerja Sibuk</h3>
-              <p class="card-desc">Hobi berkebun tapi minim waktu</p>
+              <p class="card-desc">Hobi berkebun tapi minim waktu monitoring</p>
             </div>
             <div class="card anim">
               <span class="card-icon">🌿</span>
-              <h3 class="card-title">Pemula</h3>
-              <p class="card-desc">Ingin berkebun tanpa takut gagal</p>
+              <h3 class="card-title">Pemula Berkebun</h3>
+              <p class="card-desc">Ingin berkebun tanpa takut tanaman mati</p>
             </div>
             <div class="card accent-border anim">
               <span class="card-icon">🏢</span>
               <h3 class="card-title">IoT Enthusiast</h3>
-              <p class="card-desc">Integrasi dengan smart home</p>
+              <p class="card-desc">Integrasi dengan ekosistem smart home</p>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- SLIDE 4: Solution -->
       <section class="slide" data-slide="4">
@@ -150,7 +163,13 @@
           </div>
           <div class="feature-section">
             <div class="feature-visual anim">
-              <div class="feature-circle">🌱</div>
+              <div class="feature-circle">
+                <img
+                  src="Tanami_icon.png"
+                  alt="Tanami Icon"
+                  class="feature-icon"
+                />
+              </div>
             </div>
             <div class="feature-list">
               <div class="feature-item anim">
@@ -175,7 +194,9 @@
                 <span class="feature-num">03</span>
                 <div class="feature-text">
                   <h3>Plug & Play</h3>
-                  <p>Zero-configuration dengan Network Service Discovery</p>
+                  <p>
+                    Zero-configuration dengan protokol NSD, koneksi < 2 detik
+                  </p>
                 </div>
               </div>
             </div>
@@ -208,9 +229,9 @@
             </div>
             <div class="card anim">
               <span class="card-icon">🔋</span>
-              <h3 class="card-title">Expandable</h3>
+              <h3 class="card-title">Ready-for-Expansion</h3>
               <p class="card-desc">
-                Arsitektur modular siap upgrade sensor NPK
+                Arsitektur modular, jalur siap untuk upgrade sensor NPK
               </p>
             </div>
             <div class="card accent-border span-2 anim">
@@ -276,7 +297,7 @@
               <span class="card-icon">🔌</span>
               <h3 class="card-title">ESP32</h3>
               <p class="card-desc">
-                WiFi + Bluetooth built-in, Web Server & mDNS
+                WiFi + Bluetooth built-in, Web Server & NSD support
               </p>
             </div>
             <div class="card anim">
@@ -421,12 +442,12 @@
             <div class="card accent-border anim">
               <span class="card-icon">📡</span>
               <h3 class="card-title">Broadcast</h3>
-              <p class="card-desc">ESP32 menyiarkan mDNS service</p>
+              <p class="card-desc">ESP32 menyiarkan NSD service</p>
             </div>
             <div class="card anim">
               <span class="card-icon">📶</span>
               <h3 class="card-title">Discover</h3>
-              <p class="card-desc">App mendengarkan sinyal</p>
+              <p class="card-desc">App dengan NsdManager mendengarkan sinyal</p>
             </div>
             <div class="card anim">
               <span class="card-icon">🔗</span>
@@ -480,7 +501,23 @@
               <span class="test-status">✅</span>
               <div class="test-info">
                 <h4>Auto-Watering</h4>
-                <p>Pompa aktif saat kelembaban di bawah threshold</p>
+                <p>Pompa aktif konsisten saat kelembaban < threshold 40%</p>
+              </div>
+              <span class="test-badge">Pass</span>
+            </div>
+            <div class="test-row anim">
+              <span class="test-status">✅</span>
+              <div class="test-info">
+                <h4>Closed-Loop System</h4>
+                <p>Pompa mati otomatis saat kondisi ideal tercapai</p>
+              </div>
+              <span class="test-badge">Pass</span>
+            </div>
+            <div class="test-row anim">
+              <span class="test-status">✅</span>
+              <div class="test-info">
+                <h4>Edge Computing</h4>
+                <p>Sistem tetap berjalan saat koneksi app terputus</p>
               </div>
               <span class="test-badge">Pass</span>
             </div>
@@ -488,7 +525,7 @@
               <span class="test-status">✅</span>
               <div class="test-info">
                 <h4>TanamCare AI</h4>
-                <p>Diagnosis penyakit tanaman berhasil</p>
+                <p>Diagnosis penyakit tanaman dari foto berhasil</p>
               </div>
               <span class="test-badge">Pass</span>
             </div>
@@ -508,31 +545,36 @@
           <div class="comparison-table anim">
             <div class="comp-header">
               <div class="comp-cell header">Aspek</div>
-              <div class="comp-cell header">Tanami</div>
-              <div class="comp-cell header">Kompetitor</div>
+              <div class="comp-cell header">🌱 Tanami</div>
+              <div class="comp-cell header">❌ Kompetitor</div>
             </div>
             <div class="comp-row">
               <div class="comp-cell">💰 Harga</div>
-              <div class="comp-cell win">Terjangkau</div>
-              <div class="comp-cell lose">Mahal</div>
+              <div class="comp-cell win">< Rp 200.000</div>
+              <div class="comp-cell lose">Rp 500rb - 2jt</div>
             </div>
             <div class="comp-row">
               <div class="comp-cell">🔧 Setup</div>
-              <div class="comp-cell win">Plug & Play</div>
-              <div class="comp-cell lose">Rumit</div>
+              <div class="comp-cell win">NSD < 2 detik</div>
+              <div class="comp-cell lose">IP manual</div>
             </div>
             <div class="comp-row">
-              <div class="comp-cell">🎯 Target Market</div>
-              <div class="comp-cell win">Lokal Indonesia</div>
+              <div class="comp-cell">🎯 Target</div>
+              <div class="comp-cell win">Indonesia</div>
               <div class="comp-cell lose">Generic</div>
             </div>
             <div class="comp-row">
-              <div class="comp-cell">🔌 Upgrade</div>
+              <div class="comp-cell">🔌 Arsitektur</div>
               <div class="comp-cell win">Modular</div>
               <div class="comp-cell lose">Fixed</div>
             </div>
             <div class="comp-row">
-              <div class="comp-cell">🤖 AI Features</div>
+              <div class="comp-cell">📡 Koneksi</div>
+              <div class="comp-cell win">Edge Computing</div>
+              <div class="comp-cell lose">Cloud-dependent</div>
+            </div>
+            <div class="comp-row">
+              <div class="comp-cell">🤖 AI</div>
               <div class="comp-cell win">TanamCare</div>
               <div class="comp-cell lose">—</div>
             </div>
@@ -559,7 +601,7 @@
             <div class="usp-item anim">
               <span class="usp-num">02</span>
               <div class="usp-content">
-                <h3>🔌 Zero-Configuration dengan protokol mDNS</h3>
+                <h3>🔌 Zero-Configuration dengan protokol NSD</h3>
               </div>
             </div>
             <div class="usp-item anim">

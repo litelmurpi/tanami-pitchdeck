@@ -29,6 +29,7 @@ class PitchDeck {
     this.prevBtn = document.getElementById("prevBtn");
     this.nextBtn = document.getElementById("nextBtn");
     this.slidesContainer = document.getElementById("slidesContainer");
+    this.headerLogo = document.querySelector(".header-logo");
   }
 
   bindEvents() {
@@ -213,6 +214,13 @@ class PitchDeck {
 
     this.prevBtn.disabled = this.currentSlide === 1;
     this.nextBtn.disabled = this.currentSlide === this.totalSlides;
+
+    // Handle Header Logo visibility (hide on slide 1 and last slide)
+    if (this.currentSlide === 1 || this.currentSlide === this.totalSlides) {
+      if (this.headerLogo) this.headerLogo.classList.remove("visible");
+    } else {
+      if (this.headerLogo) this.headerLogo.classList.add("visible");
+    }
   }
 
   toggleFullscreen() {
