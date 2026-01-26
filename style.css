@@ -1031,7 +1031,7 @@ body::before {
   letter-spacing: 0.05em;
 }
 
-/* Responsive */
+/* Responsive - Tablet */
 @media (max-width: 1024px) {
   .bento-grid.cols-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -1053,28 +1053,277 @@ body::before {
   }
 }
 
+/* Responsive - Mobile */
 @media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .slide {
+    padding: var(--space-md);
+  }
+
+  .slide-content {
+    max-width: 100%;
+  }
+
+  /* Header */
+  .slide-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .slide-header h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .pill-label {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+  }
+
+  /* Navigation */
+  .nav-controls {
+    bottom: var(--space-sm);
+    padding: 4px 8px;
+  }
+
+  .nav-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .keyboard-hints {
+    display: none;
+  }
+
+  .header-logo {
+    top: var(--space-sm);
+    left: var(--space-sm);
+  }
+
+  .persistent-logo {
+    height: 18px;
+  }
+
+  /* Grids */
   .bento-grid.cols-4,
   .bento-grid.cols-3,
   .bento-grid.cols-2 {
     grid-template-columns: 1fr;
+    gap: var(--space-xs);
   }
+
+  .card {
+    padding: var(--space-sm);
+  }
+
   .card.span-2 {
     grid-column: span 1;
   }
-  .keyboard-hints {
-    display: none;
+
+  .card-icon {
+    font-size: 1.2rem;
   }
-  .contact-row {
+
+  .card-title {
+    font-size: 0.85rem;
+  }
+
+  .card-desc {
+    font-size: 0.75rem;
+  }
+
+  /* Cover slide */
+  .logo-wrapper {
+    max-width: 280px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .tagline {
+    font-size: 0.75rem;
+  }
+
+  /* Feature section */
+  .feature-circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .feature-item {
+    padding: var(--space-sm);
+  }
+
+  .feature-num {
+    font-size: 1rem;
+    min-width: 24px;
+  }
+
+  .feature-text h3 {
+    font-size: 0.8rem;
+  }
+
+  .feature-text p {
+    font-size: 0.7rem;
+  }
+
+  /* Architecture */
+  .arch-flow {
     flex-direction: column;
-    align-items: center;
+    gap: var(--space-xs);
   }
-  .usp-item {
-    flex-direction: column;
-    text-align: center;
+
+  .arch-node {
+    padding: var(--space-sm);
+    min-width: 100%;
+    max-width: 100%;
   }
+
+  .arch-connector {
+    transform: rotate(90deg);
+    font-size: 1rem;
+  }
+
+  .arch-diagram img,
+  .automation-diagram img {
+    max-width: 95% !important;
+  }
+
+  /* Split view */
+  .split-view {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+
+  .panel-header {
+    padding: 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .panel-content {
+    padding: 0.5rem;
+  }
+
+  .code-display {
+    font-size: 0.65rem;
+    padding: 0.5rem;
+  }
+
+  /* Stats */
   .stats-row {
     flex-direction: column;
     align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .stat-box {
+    padding: var(--space-sm);
+    min-width: 120px;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  /* Test list */
+  .test-row {
+    padding: var(--space-sm);
+  }
+
+  .test-info h4 {
+    font-size: 0.75rem;
+  }
+
+  .test-info p {
+    font-size: 0.65rem;
+  }
+
+  /* Comparison table */
+  .comp-header,
+  .comp-row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .comp-cell {
+    padding: 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  /* USP */
+  .usp-item {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-sm);
+  }
+
+  .usp-num {
+    margin-bottom: 0.5rem;
+  }
+
+  .usp-content h3 {
+    font-size: 0.85rem;
+  }
+
+  /* Roadmap */
+  .roadmap-timeline {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .timeline-phase {
+    padding: var(--space-sm);
+  }
+
+  .phase-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .phase-content ul li {
+    font-size: 0.75rem;
+  }
+
+  /* Thank you */
+  .big-thanks .line1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .big-thanks .line2 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .contact-item {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .questions-box {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .questions-box h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  html {
+    font-size: 12px;
+  }
+
+  .slide {
+    padding: var(--space-sm);
+  }
+
+  .nav-controls {
+    bottom: 0.5rem;
   }
 }
