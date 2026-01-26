@@ -6,9 +6,7 @@
 class PitchDeck {
   constructor() {
     this.currentSlide = 1;
-    this.totalSlides = 15;
-    this.isAnimating = false;
-
+    this.totalSlides = 14
     this.init();
   }
 
