@@ -256,7 +256,7 @@ IF Kelembaban ≥ 40% → Pompa OFF
 
 **CLOSING IMPACTFUL:**
 
-> "TANAMI - sistem smart garden dengan harga kurang dari 200 ribu, setup 2 detik, dan AI untuk diagnosis penyakit."
+> "TANAMI - sistem smart garden dengan harga kurang dari 500 ribu, setup 2 detik, dan AI untuk diagnosis penyakit."
 
 **Call to Action (pilih sesuai konteks):**
 
@@ -264,10 +264,9 @@ IF Kelembaban ≥ 40% → Pompa OFF
 
   > "Dengan inovasi ini, kami yakin TANAMI layak menjadi solusi urban farming terbaik. Terima kasih atas perhatiannya."
 
-
 **Script:**
 
-> "Kami tim TANAMI - 'Menanam tumbuhan, Menyiram harapan, Menumbuhkan masa depan.' Dengan harga kurang dari 200 ribu, setup 2 detik, dan AI untuk diagnosis - kami siap membuat urban farming accessible untuk semua. Terima kasih, dan kami dengan senang hati menerima pertanyaan."
+> "Kami tim TANAMI - 'Menanam tumbuhan, Menyiram harapan, Menumbuhkan masa depan.' Dengan harga kurang dari 500 ribu, setup 2 detik, dan AI untuk diagnosis - kami siap membuat urban farming accessible untuk semua. Terima kasih, dan kami dengan senang hati menerima pertanyaan."
 
 ---
 
