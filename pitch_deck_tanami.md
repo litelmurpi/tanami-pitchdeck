@@ -375,59 +375,6 @@ Tanah basah            →   > 70%           →   🔵 BASAH
 
 ---
 
-## Slide 12: Update Perkembangan Produk (ABP Deep Dive)
-
-**Durasi:** 1 menit | 🎯 **KRITERIA: Validasi & Eksekusi**
-
-**Poin yang harus disampaikan:**
-
-1. 🏆 **Validasi Akademis:** Juara Kategori APSI di GEMASI
-2. 💻 **Progress Software:** Aplikasi mobile siap, e-commerce selesai (Laravel)
-3. ⚙️ **Progress Hardware:** Prototipe dasar (sensor, ESP32, relay) lolos uji fungsi
-
-**Script:**
-
-> "Untuk update perkembangan produk saat ini, desain dan analisis sistem kami telah tervalidasi dengan meraih Juara pada Kategori APSI di GEMASI. Secara teknis, pengembangan software seperti aplikasi mobile dan web e-commerce berbasis Laravel sudah siap. Di sisi hardware, prototipe dasar kami yang mencakup sensor, mikrokontroler, dan pompa telah berhasil melewati pengujian fungsionalitas closed-loop."
-
----
-
-## Slide 13: Target Pasar & Rencana Jangka Pendek (ABP Deep Dive)
-
-**Durasi:** 1 menit | 🎯 **KRITERIA: Potensi Pasar & Kelanjutan**
-
-**Target Utama:**
-
-- Pekerja kantoran/mahasiswa sibuk di perkotaan
-- Urban farmers pemula & komunitas hidroponik
-
-**Roadmap 3-6 Bulan:**
-
-1. Penyempurnaan MVP (Integrasi utuh IoT-DB-Mobile)
-2. Beta Testing Fisik ke pengguna nyata di luar tim
-3. Pitching AMICTA
-
-**Script:**
-
-> "Target pasar spesifik kami adalah para pekerja atau mahasiswa sibuk di kota yang hobi tanaman hias, serta para urban farmers pemula yang butuh otomasi. Rencana kami dalam 3 hingga 6 bulan ke depan berfokus pada eksekusi nyata: pertama menyempurnakan MVP agar data mengalir mulus, lalu melakukan beta testing fisik langsung ke lahan pengguna nyata, dan mempersiapkan produk ini untuk berkompetisi di AMICTA."
-
----
-
-## Slide 14: Kendala & Tantangan (ABP Deep Dive)
-
-**Durasi:** 1 menit | 🎯 **KRITERIA: Kebutuhan Inkubasi**
-
-**3 Kebutuhan Mentoring ABP:**
-
-1. 👥 **Manajemen SDM:** Butuh mentoring Agile/Scrum untuk tim part-time
-2. 💰 **Pendanaan Hardware:** Butuh modal untuk komponen fisik & server/cloud
-3. 💡 **Validasi Bisnis:** Bantuan menentukan model monetisasi yang tepat (one-time vs subscription)
-
-**Script:**
-
-> "Sebagai sebuah tim kesatuan, kami menyadari butuh ruang untuk bertumbuh, dan di sinilah peran besar ABP Incubator untuk kami. Kami menghadapi tiga tantangan utama: pertama, manajemen waktu tim part-time yang butuh mentoring Agile. Kedua, pendanaan untuk scale-up hardware fisik dan server yang memakan modal lebih besar dibanding startup software murni. Dan ketiga, kami sangat butuh arahan mentor ABP untuk memvalidasi model bisnis yang paling tepat bagi TANAMI agar sustainable ke depannya."
-
----
-
 ## Slide 15: Keunggulan Kompetitif
 
 **Durasi:** 1 menit | 🎯 **KRITERIA: Potensi Pasar**
@@ -522,6 +469,60 @@ Revenue Streams:
 **Script:**
 
 > "Pengembangan selanjutnya sudah kami rencanakan dengan jelas. Phase 2, integrasi cloud untuk menyimpan data historis, data analytics, dan push notification saat ada anomali. Phase 3, implementasi protokol MQTT untuk efisiensi bandwidth, sensor NPK yang jalurnya sudah kami siapkan, dan dukungan multi-node. Untuk bisnis, kami akan menjual DIY kit untuk retail, menawarkan solusi enterprise untuk greenhouse besar, mengembangkan platform edukasi IoT, dan subscription cloud premium. Monetisasi melalui penjualan hardware, subscription software, B2B licensing, dan modul edukasi."
+
+---
+
+
+## Slide 12: Update Perkembangan Produk (ABP Deep Dive)
+
+**Durasi:** 1 menit | 🎯 **KRITERIA: Validasi & Eksekusi**
+
+**Poin yang harus disampaikan:**
+
+1. 🏆 **Validasi Akademis:** Juara Kategori APSI di GEMASI
+2. 💻 **Progress Software:** Aplikasi mobile siap, e-commerce selesai (Laravel)
+3. ⚙️ **Progress Hardware:** Prototipe dasar (sensor, ESP32, relay) lolos uji fungsi
+
+**Script:**
+
+> "Untuk update perkembangan produk saat ini, desain dan analisis sistem kami telah tervalidasi dengan meraih Juara pada Kategori APSI di GEMASI. Secara teknis, pengembangan software seperti aplikasi mobile dan web e-commerce berbasis Laravel sudah siap. Di sisi hardware, prototipe dasar kami yang mencakup sensor, mikrokontroler, dan pompa telah berhasil melewati pengujian fungsionalitas closed-loop."
+
+---
+
+## Slide 13: Target Pasar & Rencana Jangka Pendek (ABP Deep Dive)
+
+**Durasi:** 1 menit | 🎯 **KRITERIA: Potensi Pasar & Kelanjutan**
+
+**Target Utama:**
+
+- Pekerja kantoran/mahasiswa sibuk di perkotaan
+- Urban farmers pemula & komunitas hidroponik
+
+**Roadmap 3-6 Bulan:**
+
+1. Penyempurnaan MVP (Integrasi utuh IoT-DB-Mobile)
+2. Beta Testing Fisik ke pengguna nyata di luar tim
+3. Pitching AMICTA
+
+**Script:**
+
+> "Target pasar spesifik kami adalah para pekerja atau mahasiswa sibuk di kota yang hobi tanaman hias, serta para urban farmers pemula yang butuh otomasi. Rencana kami dalam 3 hingga 6 bulan ke depan berfokus pada eksekusi nyata: pertama menyempurnakan MVP agar data mengalir mulus, lalu melakukan beta testing fisik langsung ke lahan pengguna nyata, dan mempersiapkan produk ini untuk berkompetisi di AMICTA."
+
+---
+
+## Slide 14: Kendala & Tantangan (ABP Deep Dive)
+
+**Durasi:** 1 menit | 🎯 **KRITERIA: Kebutuhan Inkubasi**
+
+**3 Kebutuhan Mentoring ABP:**
+
+1. 👥 **Manajemen SDM:** Butuh mentoring Agile/Scrum untuk tim part-time
+2. 💰 **Pendanaan Hardware:** Butuh modal untuk komponen fisik & server/cloud
+3. 💡 **Validasi Bisnis:** Bantuan menentukan model monetisasi yang tepat (one-time vs subscription)
+
+**Script:**
+
+> "Sebagai sebuah tim kesatuan, kami menyadari butuh ruang untuk bertumbuh, dan di sinilah peran besar ABP Incubator untuk kami. Kami menghadapi tiga tantangan utama: pertama, manajemen waktu tim part-time yang butuh mentoring Agile. Kedua, pendanaan untuk scale-up hardware fisik dan server yang memakan modal lebih besar dibanding startup software murni. Dan ketiga, kami sangat butuh arahan mentor ABP untuk memvalidasi model bisnis yang paling tepat bagi TANAMI agar sustainable ke depannya."
 
 ---
 
