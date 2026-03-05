@@ -43,6 +43,50 @@
   --radius-xl: 32px;
 }
 
+/* ========== LUCIDE ICONS ========== */
+
+[data-lucide] {
+  display: inline-block;
+  vertical-align: middle;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* Inline icon size (data-points, benefits, roadmap list, compare rows, contact, summary) */
+.data-icon [data-lucide],
+.benefit-item [data-lucide],
+.nsd-benefit [data-lucide],
+.roadmap-phase li [data-lucide],
+.compare-row [data-lucide],
+.contact-info [data-lucide],
+.summary-item [data-lucide],
+.flow-node [data-lucide] {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  color: var(--accent);
+}
+
+/* Medium icon size (problem cards, test icons) */
+.problem-icon [data-lucide],
+.test-icon [data-lucide] {
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+}
+
+/* Large icon size (innovation, software, usp) */
+.inno-icon [data-lucide],
+.software-icon [data-lucide],
+.usp-icon [data-lucide] {
+  width: 36px;
+  height: 36px;
+  color: var(--accent);
+}
+
 *,
 *::before,
 *::after {
@@ -409,6 +453,9 @@ body::before {
 
 .data-icon {
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .data-text {
@@ -463,6 +510,9 @@ body::before {
 .problem-icon {
   font-size: 2rem;
   margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .problem-card h3 {
@@ -595,6 +645,8 @@ body::before {
 .inno-icon {
   font-size: 2rem;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
 .inno-content h3 {
@@ -715,6 +767,9 @@ body::before {
 .benefit-item {
   font-size: 0.9rem;
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* ========== TEST GRID ========== */
@@ -738,6 +793,8 @@ body::before {
 
 .test-icon {
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
 }
 
 .test-name {
@@ -893,6 +950,9 @@ body::before {
 .software-icon {
   font-size: 2.5rem;
   margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .software-card h3 {
@@ -1015,6 +1075,9 @@ body::before {
 .usp-icon {
   font-size: 2.5rem;
   margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .usp-card h3 {
